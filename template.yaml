@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  AWS serverless application model(sam) service
+  to process customer data
+
+Resources:
+
+
+  AwsLambdaServiceDeployment:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src\
+      Handler: main.lambda_handler
+      Runtime: python3.8

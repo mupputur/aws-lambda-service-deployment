@@ -1,10 +1,11 @@
 import json
 
+
 def lambda_handler(event, context):
-    personId = event['queryStringParameters']['personId']
+    customer_id  = event['customers']['id']
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "personId": personId + " from Lambda" ,
+            "customerID": customer_id,
         }),
     }
