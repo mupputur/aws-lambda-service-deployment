@@ -14,7 +14,8 @@ This repository contains a simple AWS Lambda function that returns the `customer
 - A configured S3 bucket to store the Lambda function code package
 
 ## Deployment Steps
-After you clone the repository, follow the steps
+After you clone the repository and install the dependencies in the requirements.txt file, follow the steps
+
 ### Step 1: Zip and Upload main.py file to S3
 
 ### Step 2: Modify the Lambda Function Code Path
