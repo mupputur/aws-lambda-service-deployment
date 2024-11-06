@@ -20,7 +20,7 @@ After you clone the repository and install the dependencies in the requirements.
 
 ### Step 2: Modify the Lambda Function Code Path
   Update the `CodeUri` in `template.yaml` to specify the S3 location where the Lambda function code will be uploaded.
-  -yaml
+  - **template.yaml**
   Resources:
       AwsLambdaServiceDeployment:
         Type: AWS::Serverless::Function
