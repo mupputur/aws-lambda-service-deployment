@@ -10,6 +10,6 @@ Resources:
   AwsLambdaServiceDeployment:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://bucket-for-cloudformation02/main.zip  # Update it with your S3 URI
+      CodeUri: src/  # Update it with your S3 URI
       Handler: main.lambda_handler
       Runtime: python3.12
