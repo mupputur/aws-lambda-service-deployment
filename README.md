@@ -1,17 +1,55 @@
-# AWS Lambda Deployment with AWS SAM
-This repository contains an AWS Lambda function that returns a customer_id from an incoming event. The Lambda function is deployed using AWS Serverless Application Model (SAM) within a CloudFormation stack.
+# Project Overview 
+     
 
-## Files in This Repository
+# AWS Lambda Deployment with AWS SAM
+  The serverless Lambda function is defined with customer data, and when a user inputs a customer `id` in the event JSON, the Lambda function returns the corresponding customer data. For Lambda function deployment, we used an AWS CloudFormation Template (CFT) and employed the AWS Serverless Application Model (SAM) CLI to deploy the function from the local environment to the AWS Management Console
+
+
+## Setup & Installation 
+
+Clone : 
+
+1. Install python version 3.11 
+For Windows 
+
+For Mac 
+
+For Linux : 
+
+2. Create virtual environemnt  
+
+3.  Activate Virtual Environment 
+
+4.  Install depdenecies 
+
+
+Prereqsite  : 
+
+- Install AWS CLI :   DOC REF  
+- COnfigure AWS :  
+- INSTAL SAM SLI
+
+
+## Project Structure
+
+ * [src](./src)
+   * [file21.ext](./dir2/file21.ext)
+   * [file22.ext](./dir2/file22.ext)
+   * [file23.ext](./dir2/file23.ext)
+ * [dir1](./dir1)
+   * [file11.ext](./dir1/file11.ext)
+   * [file12.ext](./dir1/file12.ext)
+ * [file_in_root.ext](./file_in_root.ext)
+ * [README.md](./README.md)
+ * [dir3](./dir3)
+
+## Key Files and Their Purpose
 - template.yaml: AWS SAM template defining the Lambda function and necessary IAM permissions.
-- README.md: Documentation file providing setup and deployment instructions.
-- src: Contains the source code and dependencies for the Lambda function.
-  - awsUtils: (Empty folder)
-    - __init__.py:  (Empty file)
-  - commonUtils: (Empty folder)
-    - __init__.py:  (Empty file)
-  - __init__.py:  (Empty file)
-  - main.py: The main Lambda function code (lambda_handler) to extract and return the customer_id from an incoming event.
-  - requirements.txt: (Exmpty foler) List of Python dependencies required by the Lambda function.
+main.py
+
+tests
+awsUtils - The purpose of this package is to define the common utilities specific to aws resources 
+commonUtils - To define common utilities for 
 
 ## Prerequisites
 Before deploying the application, ensure the following tools are installed and configured on your machine:
@@ -43,13 +81,11 @@ Once the deployment is complete, check the CloudFormation stack in the AWS Conso
 - Go to the CloudFormation Console and locate customerDataLambda (or your chosen stack name).
 - Navigate to the Outputs tab to find the Lambda function's ARN and other deployment details.
 
-### Step 4: Test the Lambda Function
+### Step 4: Test the Lambda Function 
 You can test the Lambda function from the AWS Console or AWS CLI. The function expects an event with the following structure:
 ```JSON
 {
-  "customers": {
     "id": "12345"
-  }
 }
 ```
 Testing in AWS Console
@@ -66,7 +102,12 @@ The expected response should look like this:
 }
 ```
 
-## Optional: Validate the CloudFormation Template
+## PR Release Guidelines 
+
+1.  Format 
+2. 
 To ensure the template is correct, you can validate it before deployment:
 `aws cloudformation validate-template --template-body file://template.yaml --region us-east-1`
 If successful, this command should confirm the template's validity.
+
+cf
