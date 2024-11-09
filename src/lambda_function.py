@@ -20,9 +20,12 @@ def lambda_handler(event, context):
                     ]
     
     # Get the customer id from the lanvda event
-    try: 
+    try:
+        if not event or 'id' not in event:
+            raise ValueError("Invalid input: 'id' is required")
+         
         customer_id  = event.get('id')
-        for customer_data in customer_data:
+        for customer_data in customers_data:
             if customer_data.get('id') == customer_id:
                 print(f"Identified the customer id : {customer_id} and processing data...")
                 return {
