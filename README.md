@@ -92,15 +92,11 @@ Replace `package-name` with the name of the package you want to install.
 
  * [src](./src)
    * [awsUtils](./src/awsUtils)
-      * [\_\_init_\_\.py](./src/awsUtils/__init__.py)
-   * [commonUtils](./src/commonUtils/__init__.py)
-      * [\_\_init_\_\.py](./src/commonUtils/__init__.py)
-   * [\_\_init_\_\.py](./src/__init__.py)
+   * [commonUtils](./src/commonUtils)
    * [lambda_function.py](./src/lambda_function.py)
    * [requirements.txt](./src/requirements.txt)
  * [tests](./tests)
    * [test_lambda_function.py](./tests/test_lambda_function.py)
- * [README.md](./README.md)
  * [template.yaml](./template.yaml)
 
 ## Key Files and Their Purpose
