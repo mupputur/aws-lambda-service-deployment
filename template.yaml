@@ -10,6 +10,6 @@ Resources:
   AwsLambdaServiceDeployment:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/  # Update it with your S3 URI
-      Handler: main.lambda_handler
+      CodeUri: src/
+      Handler: lambda_function.lambda_handler
       Runtime: python3.12
